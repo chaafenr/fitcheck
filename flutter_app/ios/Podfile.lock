@@ -1,23 +1,93 @@
 PODS:
+  - Amplify (1.30.4):
+    - Amplify/Default (= 1.30.4)
+  - Amplify/Default (1.30.4)
+  - amplify_auth_cognito_ios (0.0.1):
+    - Amplify (= 1.30.4)
+    - amplify_core
+    - AmplifyPlugins/AWSCognitoAuthPlugin (= 1.30.4)
+    - Flutter
+    - ObjectMapper
+  - amplify_core (0.0.1):
+    - Flutter
+    - SwiftFormat/CLI
+    - SwiftLint (= 0.48.0)
+  - amplify_flutter_ios (0.0.1):
+    - Amplify (= 1.30.4)
+    - amplify_core
+    - AmplifyPlugins/AWSCognitoAuthPlugin (= 1.30.4)
+    - AWSPluginsCore (= 1.30.4)
+    - Flutter
+    - SwiftFormat/CLI
+    - SwiftLint (= 0.48.0)
+  - AmplifyPlugins/AWSCognitoAuthPlugin (1.30.4):
+    - AWSAuthCore (~> 2.33.0)
+    - AWSCognitoIdentityProvider (~> 2.33.0)
+    - AWSCognitoIdentityProviderASF (~> 2.33.0)
+    - AWSCore (~> 2.33.0)
+    - AWSMobileClient (~> 2.33.0)
+    - AWSPluginsCore (= 1.30.4)
+  - AWSAuthCore (2.33.10):
+    - AWSCore (= 2.33.10)
+  - AWSCognitoIdentityProvider (2.33.10):
+    - AWSCognitoIdentityProviderASF (= 2.33.10)
+    - AWSCore (= 2.33.10)
+  - AWSCognitoIdentityProviderASF (2.33.10):
+    - AWSCore (= 2.33.10)
+  - AWSCore (2.33.10)
+  - AWSMobileClient (2.33.10):
+    - AWSAuthCore (= 2.33.10)
+    - AWSCognitoIdentityProvider (= 2.33.10)
+    - AWSCognitoIdentityProviderASF (= 2.33.10)
+    - AWSCore (= 2.33.10)
+  - AWSPluginsCore (1.30.4):
+    - Amplify (= 1.30.4)
+    - AWSCore (~> 2.33.0)
   - camera_avfoundation (0.0.1):
     - Flutter
   - Flutter (1.0.0)
   - image_picker_ios (0.0.1):
     - Flutter
+  - ObjectMapper (4.2.0)
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
   - permission_handler_apple (9.3.0):
     - Flutter
+  - SwiftFormat/CLI (0.55.5)
+  - SwiftLint (0.48.0)
 
 DEPENDENCIES:
+  - amplify_auth_cognito_ios (from `.symlinks/plugins/amplify_auth_cognito_ios/ios`)
+  - amplify_core (from `.symlinks/plugins/amplify_core/ios`)
+  - amplify_flutter_ios (from `.symlinks/plugins/amplify_flutter_ios/ios`)
   - camera_avfoundation (from `.symlinks/plugins/camera_avfoundation/ios`)
   - Flutter (from `Flutter`)
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
 
+SPEC REPOS:
+  trunk:
+    - Amplify
+    - AmplifyPlugins
+    - AWSAuthCore
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSMobileClient
+    - AWSPluginsCore
+    - ObjectMapper
+    - SwiftFormat
+    - SwiftLint
+
 EXTERNAL SOURCES:
+  amplify_auth_cognito_ios:
+    :path: ".symlinks/plugins/amplify_auth_cognito_ios/ios"
+  amplify_core:
+    :path: ".symlinks/plugins/amplify_core/ios"
+  amplify_flutter_ios:
+    :path: ".symlinks/plugins/amplify_flutter_ios/ios"
   camera_avfoundation:
     :path: ".symlinks/plugins/camera_avfoundation/ios"
   Flutter:
@@ -30,12 +100,26 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/permission_handler_apple/ios"
 
 SPEC CHECKSUMS:
-  camera_avfoundation: 04b44aeb14070126c6529e5ab82cc7c9fca107cf
+  Amplify: 4e41668c8801667e174ab50c12bc3099c71a257f
+  amplify_auth_cognito_ios: 9541d4c811f978e22d4f4d6e3ed50b7c31ed9d35
+  amplify_core: 0876b2fbbcec7619f5b58b20c59ecc0118f65a47
+  amplify_flutter_ios: 4389fb31392bf559fead6ac2e3fd2f7ec8e44beb
+  AmplifyPlugins: 1335f0919aa07329df58685a020f2311c75a5176
+  AWSAuthCore: dfaed2a858cdb320c6c9c5c94c4de97bbaa76dad
+  AWSCognitoIdentityProvider: 4cb2d157236eb5da17c8acc18e6c2e3b7b3a739e
+  AWSCognitoIdentityProviderASF: af81ced9e3d1e14634e33abbd2343c2c9b5c8138
+  AWSCore: 3c1a3dad47fcf9db8bebc633f296f10b690328c6
+  AWSMobileClient: 9df04a49060cae075dbba851c8281e1f0c90d112
+  AWSPluginsCore: f2188458c27e6cb09597c67876f80611d14275d7
+  camera_avfoundation: dd002b0330f4981e1bbcb46ae9b62829237459a4
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  image_picker_ios: 7fe1ff8e34c1790d6fff70a32484959f563a928a
-  path_provider_foundation: 080d55be775b7414fd5a5ef3ac137b97b097e564
-  permission_handler_apple: 4ed2196e43d0651e8ff7ca3483a069d469701f2d
+  image_picker_ios: c560581cceedb403a6ff17f2f816d7fea1421fc1
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
+  permission_handler_apple: 9878588469a2b0d0fc1e048d9f43605f92e6cec2
+  SwiftFormat: 548c7b221429101546d3caeeeb672f11578df0ad
+  SwiftLint: 284cea64b6187c5d6bd83e9a548a64104d546447
 
 PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
 
-COCOAPODS: 1.16.2
+COCOAPODS: 1.10.0

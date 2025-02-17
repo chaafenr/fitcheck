@@ -4,7 +4,19 @@ import 'package:camera/camera.dart';
 import 'pages/home_page.dart';
 import 'pages/phone_login.dart';
 import 'pages/otp_verification.dart';
+import 'package:amplify_flutter/amplify_flutter.dart';
+import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
+import 'amplifyconfiguration.dart';
 
+void configureAmplify() async {
+  try {
+    final auth = AmplifyAuthCognito();
+    await Amplify.addPlugin(auth);
+    await Amplify.configure(amplifyconfig);
+  } catch (e) {
+    print('An error occurred configuring Amplify: $e');
+  }
+}
 // ignore: unused_element
 late List<CameraDescription> _cameras;
 

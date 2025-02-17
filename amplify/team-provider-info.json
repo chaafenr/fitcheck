@@ -1,0 +1,39 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-fitcheck-dev-cd7e0-authRole",
+      "UnauthRoleArn": "arn:aws:iam::442426883333:role/amplify-fitcheck-dev-cd7e0-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::442426883333:role/amplify-fitcheck-dev-cd7e0-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-fitcheck-dev-cd7e0-deployment",
+      "UnauthRoleName": "amplify-fitcheck-dev-cd7e0-unauthRole",
+      "StackName": "amplify-fitcheck-dev-cd7e0",
+      "StackId": "arn:aws:cloudformation:us-east-1:442426883333:stack/amplify-fitcheck-dev-cd7e0/36a31bd0-ed15-11ef-b401-1213df58d077",
+      "AmplifyAppId": "d35q6k032w5eob",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-fitcheck-dev-cd7e0-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "fitcheck": {}
+      },
+      "function": {
+        "fitcheckCreateAuthChallenge": {
+          "deploymentBucketName": "amplify-fitcheck-dev-cd7e0-deployment",
+          "s3Key": "amplify-builds/fitcheckCreateAuthChallenge-5a4f304c615231616e4e-build.zip"
+        },
+        "fitcheckDefineAuthChallenge": {
+          "deploymentBucketName": "amplify-fitcheck-dev-cd7e0-deployment",
+          "s3Key": "amplify-builds/fitcheckDefineAuthChallenge-47783477783932596d65-build.zip"
+        },
+        "fitcheckPreSignup": {
+          "deploymentBucketName": "amplify-fitcheck-dev-cd7e0-deployment",
+          "s3Key": "amplify-builds/fitcheckPreSignup-69577a5170592f715070-build.zip"
+        },
+        "fitcheckVerifyAuthChallengeResponse": {
+          "deploymentBucketName": "amplify-fitcheck-dev-cd7e0-deployment",
+          "s3Key": "amplify-builds/fitcheckVerifyAuthChallengeResponse-79673237395475694f62-build.zip"
+        }
+      }
+    }
+  }
+}
