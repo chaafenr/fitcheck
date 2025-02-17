@@ -6,17 +6,10 @@ import 'pages/phone_login.dart';
 import 'pages/otp_verification.dart';
 import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
+import 'package:flutter/material.dart';
+
 import 'amplifyconfiguration.dart';
 
-void configureAmplify() async {
-  try {
-    final auth = AmplifyAuthCognito();
-    await Amplify.addPlugin(auth);
-    await Amplify.configure(amplifyconfig);
-  } catch (e) {
-    print('An error occurred configuring Amplify: $e');
-  }
-}
 // ignore: unused_element
 late List<CameraDescription> _cameras;
 
@@ -25,6 +18,18 @@ void main() async {
   _cameras = await availableCameras();
   runApp(const MyApp());
 }
+
+Future<void> _configureAmplify() async {
+    try {
+      final auth = AmplifyAuthCognito();
+      await Amplify.addPlugin(auth);
+
+      // call Amplify.configure to use the initialized categories in your app
+      await Amplify.configure(amplifyconfig);
+    } on Exception catch (e) {
+      safePrint('An error occurred configuring Amplify: $e');
+    }
+  }
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -51,7 +56,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'FitCheck',
-      theme: ThemeData.dark(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Color(0xffEFE3F3)
+      ),
       initialRoute: '/',
       routes: {
         '/': (context) => const PhoneLoginScreen(),

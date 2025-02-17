@@ -40,9 +40,11 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   intl_phone_field: ^3.2.0
-  flutter_staggered_grid_view: ^0.4.0
-  amplify_flutter: ^0.6.0
-  amplify_auth_cognito: ^0.6.0
+  flutter_staggered_grid_view:
+  amplify_flutter:
+  amplify_auth_cognito:
+  amplify_api:
+
 
   image_picker: ^1.1.2
 

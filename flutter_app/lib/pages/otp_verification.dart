@@ -9,7 +9,6 @@ class OtpVerificationScreen extends StatelessWidget {
     String phoneNumber = args?["phoneNumber"] ?? "your number";
 
     return Scaffold(
-      backgroundColor:Color(0xFFEADCf0),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32.0),
@@ -18,13 +17,13 @@ class OtpVerificationScreen extends StatelessWidget {
             children: [
               const Text(
                 'Enter the code',
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.white),
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Color(0xffd64117)),
               ),
               const SizedBox(height: 10),
               Text(
                 'We sent a code to $phoneNumber',
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 16, color: Colors.white60),
+                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xff872626)),
               ),
               const SizedBox(height: 40),
 
@@ -35,9 +34,9 @@ class OtpVerificationScreen extends StatelessWidget {
                 style: const TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.grey[800],
+                  fillColor: Color(0xffd0addc),
                   hintText: 'Enter OTP',
-                  hintStyle: const TextStyle(color: Colors.white60),
+                  hintStyle: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                     borderSide: BorderSide.none,
@@ -52,14 +51,19 @@ class OtpVerificationScreen extends StatelessWidget {
                   Navigator.pushReplacementNamed(context, "/home");
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Color(0xff872626),
                   foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24), 
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-                child: const Text('Verify & Continue'),
+                child: const Text("Verify & Continue",
+                    style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),),
               ),
             ],
           ),

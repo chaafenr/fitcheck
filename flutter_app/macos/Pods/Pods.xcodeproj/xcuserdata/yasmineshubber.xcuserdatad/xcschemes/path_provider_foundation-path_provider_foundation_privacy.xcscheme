@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6665E994FA6BDAD3162E29390B9D4D39"
-               BuildableName = "file_selector_macos_privacy.bundle"
-               BlueprintName = "file_selector_macos-file_selector_macos_privacy"
+               BlueprintIdentifier = "CACE6618E7996464E38687E13F67D945"
+               BuildableName = "path_provider_foundation_privacy.bundle"
+               BlueprintName = "path_provider_foundation-path_provider_foundation_privacy"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
