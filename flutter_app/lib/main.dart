@@ -62,7 +62,7 @@ class _MyAppState extends State<MyApp> {
       initialRoute: '/',
       routes: {
         '/': (context) => const PhoneLoginScreen(),
-        '/otp': (context) => const OtpVerificationScreen(),
+        '/otp': (context) => OtpVerificationScreen(),
         '/home': (context) => HomePage(),
       },
     );

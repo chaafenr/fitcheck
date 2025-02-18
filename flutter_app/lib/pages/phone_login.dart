@@ -62,23 +62,6 @@ class _PhoneLoginScreenState extends State<PhoneLoginScreen> {
   }
 
 
-  // // Confirm the OTP code and sign the user in
-  // Future<void> _confirmSignUp(String phoneNumber, String otpCode) async {
-  //   try {
-  //     final result = await Amplify.Auth.confirmSignUp(
-  //       username: phoneNumber,
-  //       confirmationCode: otpCode,
-  //     );
-
-  //     if (result.isSignUpComplete) {
-  //       debugPrint('User confirmed! Proceeding to sign in.');
-  //       _signInUser(phoneNumber);
-  //     }
-  //   } catch (e) {
-  //     debugPrint('Error confirming OTP: $e');
-  //   }
-  // }
-
   // Sign the user in
   Future<void> _signInUser(String phoneNumber, BuildContext context) async {
     try {

@@ -1,7 +1,38 @@
 import 'package:flutter/material.dart';
+import 'phone_login.dart';
+import 'package:amplify_flutter/amplify_flutter.dart';
+// import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 
 class OtpVerificationScreen extends StatelessWidget {
-  const OtpVerificationScreen({super.key});
+  OtpVerificationScreen({super.key});
+  // Confirm the OTP code and sign the user in
+  // Controller for OTP input
+  final TextEditingController _otpController = TextEditingController();
+
+  // Confirm the OTP code and sign the user in
+  Future<void> _confirmSignUp(BuildContext context, String phoneNumber, String otpCode) async {
+    try {
+      SignUpResult result = await Amplify.Auth.confirmSignUp(
+        username: phoneNumber,
+        confirmationCode: otpCode,
+      );
+
+      if (result.isSignUpComplete) {
+        // Navigate to home page if sign up is complete
+        Navigator.pushReplacementNamed(context, "/home");
+      } else {
+        // Handle the case where sign up is not complete
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Sign up not complete. Please try again.')),
+        );
+      }
+    } on AuthException catch (e) {
+      // Handle the error
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(e.message)),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +79,16 @@ class OtpVerificationScreen extends StatelessWidget {
               // Continue Button
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, "/home");
+                  // Get OTP from TextField
+                  String otpCode = _otpController.text.trim(); 
+                  if (otpCode.isNotEmpty) {
+                    // Call the _confirmSignUp method with the context and OTP
+                    _confirmSignUp(context, phoneNumber, otpCode);
+                  } else {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Please enter the OTP.')),
+                    );
+                  }
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xff872626),
