@@ -26,40 +26,30 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-
-	<!-- ✅ Camera Permission -->
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>FitCheck may require Bluetooth access for future connectivity features.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>FitCheck needs camera access to take outfit photos and videos.</string>
-
-	<!-- ✅ Microphone Permission -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>FitCheck may use your location for personalized outfit recommendations.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>FitCheck needs microphone access to record videos with audio.</string>
-
-	<!-- ✅ Photo Library Permissions -->
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>FitCheck needs access to your photo library to allow you to upload and select images.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>FitCheck needs permission to save your outfit photos in your gallery.</string>
-
-	<!-- ✅ Required for handling indirect input events -->
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>FitCheck needs access to your photo library to allow you to upload and select images.</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
-
-	<!-- ✅ Launch Screen Configuration -->
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-
-	<!-- ✅ Supported Screen Orientations -->
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-
-	<!-- ✅ Supported Screen Orientations for iPads -->
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -67,14 +57,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-
-	<!-- ✅ Bluetooth Permission (if needed for future features) -->
-	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>FitCheck may require Bluetooth access for future connectivity features.</string>
-
-	<!-- ✅ Location Permission (for potential location-based features) -->
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>FitCheck may use your location for personalized outfit recommendations.</string>
-
 </dict>
 </plist>
